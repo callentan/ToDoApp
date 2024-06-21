@@ -6,11 +6,10 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0.302-1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["ITAI_API.csproj", "ITAI_API/"]
-RUN dotnet --version
 RUN dotnet restore "./ITAI_API/ITAI_API.csproj"
 COPY . .
 WORKDIR "/src/ITAI_API"
