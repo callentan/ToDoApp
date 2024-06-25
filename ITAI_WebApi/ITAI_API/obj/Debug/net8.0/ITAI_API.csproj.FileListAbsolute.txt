@@ -1,0 +1,6 @@
+D:\Projects\ToDoApp\ITAI_WebApi\ITAI_API\obj\Debug\net8.0\ITAI_API.csproj.AssemblyReference.cache
+D:\Projects\ToDoApp\ITAI_WebApi\ITAI_API\obj\Debug\net8.0\ITAI_API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\ToDoApp\ITAI_WebApi\ITAI_API\obj\Debug\net8.0\ITAI_API.AssemblyInfoInputs.cache
+D:\Projects\ToDoApp\ITAI_WebApi\ITAI_API\obj\Debug\net8.0\ITAI_API.AssemblyInfo.cs
+D:\Projects\ToDoApp\ITAI_WebApi\ITAI_API\obj\Debug\net8.0\ITAI_API.csproj.CoreCompileInputs.cache
+D:\Projects\ToDoApp\ITAI_WebApi\ITAI_API\obj\Debug\net8.0\ITAI_API.sourcelink.json

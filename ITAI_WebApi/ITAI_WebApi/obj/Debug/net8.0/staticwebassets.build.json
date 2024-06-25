@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "hID4wGTPRkC51neAE8IveiyNlhgUeCR6RS+7e+PLJ2o=",
+  "Source": "ITAI_WebApi",
+  "BasePath": "_content/ITAI_WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ITAI_WebApi.props" />
+</Project>
