@@ -4,6 +4,6 @@ USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
-COPY ./bin/debug/net8.0 .
+COPY ./bin/Debug/net8.0 .
 
 ENTRYPOINT ["dotnet", "ITAI.dll"]
