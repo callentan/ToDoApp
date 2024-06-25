@@ -13,7 +13,7 @@ COPY ["WebApplication1.csproj", "WebApplication1/"]
 RUN dotnet restore "./WebApplication1/WebApplication1.csproj"
 COPY . .
 WORKDIR "/src/WebApplication1"
-RUN dotnet build "./WebApplication1/WebApplication1.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "WebApplication1.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
