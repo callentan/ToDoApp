@@ -15,7 +15,11 @@ COPY . .
 WORKDIR "/src/ITAI_API"
 RUN dotnet build "./ITAI_API.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./ITAI_API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
 FROM base AS final
 WORKDIR /app
-COPY --from=build /app/build .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "ITAI_API.dll"]
