@@ -1,0 +1,6 @@
+@ITAI_WebApi_HostAddress = http://localhost:5168
+
+GET {{ITAI_WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
