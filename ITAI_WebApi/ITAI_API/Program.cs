@@ -8,7 +8,7 @@ namespace ITAI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = "Server=tcp:117.88.94.61,1433;Database=itai-poc;User ID=admin;Password=Pwd@1234;";
+            var connectionString = "Server=tcp:192.168.0.3,1433;Database=itai-poc;User ID=admin;Password=Pwd@1234;";
             // Add services to the container.
 
             builder.Services.AddControllers();
