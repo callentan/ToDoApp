@@ -8,7 +8,7 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <OutputType>Exe</OutputType>
 	  <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-	  <StartupObject>ITAI.Program</StartupObject>
+	  <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
