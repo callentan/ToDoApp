@@ -1,7 +1,7 @@
-using ITAI_API.Models;
+using ITAI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ITAI_API
+namespace ITAI
 {
     public class Program
     {

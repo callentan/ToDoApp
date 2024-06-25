@@ -9,18 +9,18 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ITAI_API.csproj", "ITAI_API/"]
+COPY ["ITAI.csproj", "ITAI/"]
 RUN dotnet --version
-RUN dotnet restore "./ITAI_API/ITAI_API.csproj"
+RUN dotnet restore "./ITAI/ITAI.csproj"
 COPY . .
-WORKDIR "/src/ITAI_API"
-RUN dotnet build "./ITAI_API.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/ITAI"
+RUN dotnet build "./ITAI.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./ITAI_API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./ITAI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app/publish
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ITAI_API.dll"]
+ENTRYPOINT ["dotnet", "ITAI.dll"]

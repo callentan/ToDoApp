@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using ITAI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ITAI_API.Models;
 
-namespace ITAI_API.Controllers
+namespace ITAI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

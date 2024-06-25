@@ -8382,9 +8382,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\ToDoApp\\ITAI_WebApi\\ITAI_API\\ITAI_API.csproj",
-      "projectName": "ITAI_API",
-      "projectPath": "D:\\Projects\\ToDoApp\\ITAI_WebApi\\ITAI_API\\ITAI_API.csproj",
+      "projectUniqueName": "D:\\Projects\\ToDoApp\\ITAI_WebApi\\ITAI_API\\ITAI.csproj",
+      "projectName": "ITAI",
+      "projectPath": "D:\\Projects\\ToDoApp\\ITAI_WebApi\\ITAI_API\\ITAI.csproj",
       "packagesPath": "C:\\Users\\z004dhsw\\.nuget\\packages\\",
       "outputPath": "D:\\Projects\\ToDoApp\\ITAI_WebApi\\ITAI_API\\obj\\",
       "projectStyle": "PackageReference",

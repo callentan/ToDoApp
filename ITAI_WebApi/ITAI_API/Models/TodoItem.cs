@@ -1,4 +1,4 @@
-﻿namespace ITAI_API.Models
+﻿namespace ITAI.Models
 {
     public class TodoItem
     {

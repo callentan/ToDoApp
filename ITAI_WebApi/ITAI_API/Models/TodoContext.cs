@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace ITAI_API.Models
+namespace ITAI.Models
 {
     public class TodoContext : DbContext
     {
