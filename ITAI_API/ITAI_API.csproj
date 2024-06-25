@@ -7,7 +7,7 @@
     <UserSecretsId>8d7dab65-0f77-4170-9b6e-eef19f92e73f</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
