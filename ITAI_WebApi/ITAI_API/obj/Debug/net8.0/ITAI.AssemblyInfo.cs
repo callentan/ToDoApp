@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ITAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2d05e6a9f6d5cc4d4a7ffd19d5c8e967e0aa893")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80d7b121584c6138435da1394157ed569aa16df6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ITAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ITAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

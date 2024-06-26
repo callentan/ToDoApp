@@ -23,3 +23,11 @@ D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\obj\Debug\net8.0\refint\TodoApi.dll
 D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\obj\Debug\net8.0\TodoApi.pdb
 D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\obj\Debug\net8.0\TodoApi.genruntimeconfig.cache
 D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\obj\Debug\net8.0\ref\TodoApi.dll
+D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\bin\Debug\net8.0\TodoApi.exe
+D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\obj\Debug\net8.0\TodoApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\obj\Debug\net8.0\TodoApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\ToDoApp\ITAI_WebApi\TodoApi\obj\Debug\net8.0\TodoApi.csproj.Up2Date
