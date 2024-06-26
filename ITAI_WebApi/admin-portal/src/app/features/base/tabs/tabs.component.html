@@ -1,5 +1,10 @@
 <sh-tabs>
   <sh-tab-item
+  label="Todo"
+  (click)="loadTodoPage()"
+  [active]="route === 'todo'"
+></sh-tab-item>
+  <sh-tab-item
     label="Application"
     (click)="loadApplicationPage()"
     [active]="route === 'application'"
@@ -7,6 +12,6 @@
   <sh-tab-item
     label="Configuration"
     (click)="loadConfigurationPage()"
-    [active]="route === 'Configuration'"
+    [active]="route === 'configuration'"
   ></sh-tab-item>
 </sh-tabs>

@@ -20,6 +20,6 @@ import { Router, RouterOutlet } from '@angular/router';
 export class BaseComponent implements OnInit {
   private router = inject(Router);
   ngOnInit(): void {
-    this.router.navigate(['application']);
+    this.router.navigate(['todo']);
   }
 }

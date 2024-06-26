@@ -10,11 +10,14 @@ import { Router } from '@angular/router';
 })
 export class TabsComponent {
   private router = inject(Router);
-  route: string = 'application';
+  route: string = 'todo';
   loadApplicationPage() {
     this.router.navigate(['application']);
   }
   loadConfigurationPage() {
     this.router.navigate(['configuration']);
+  }
+  loadTodoPage() {
+    this.router.navigate(['todo']);
   }
 }

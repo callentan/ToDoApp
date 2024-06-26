@@ -1,0 +1,53 @@
+<div class="container">
+  <sh-button
+    size="l"
+    color="primary"
+    label="New Task"
+    (click)="openCreateTodoItemnDrawer()"
+  ></sh-button>
+  <sh-table>
+    <sh-table-row slot="header">
+      <sh-table-head columns="12" col-m="12" col-s="24">Content</sh-table-head>
+      <sh-table-head columns="6" col-m="12" col-s="0">Complete</sh-table-head>
+      <sh-table-head icon>
+        <sh-icon button icon=""></sh-icon>
+      </sh-table-head>
+    </sh-table-row>
+    <sh-table-row *ngFor="let item of todoItems$ | async">
+      <sh-table-cell columns="12" col-m="12" col-s="24">{{
+        item.content
+      }}</sh-table-cell>
+      <sh-table-cell columns="6" col-m="12" col-s="0">{{
+        item.isComplete
+      }}</sh-table-cell>
+      <sh-table-cell icon>
+        <sh-icon button icon="more"></sh-icon>
+      </sh-table-cell>
+    </sh-table-row>
+  </sh-table>
+  <sh-drawer *ngIf="isDrawerDisplay" position="right" sticky visible>
+    <div slot="header" class="header">
+      <sh-text size="header-1">Create a new task</sh-text>
+    </div>
+    <div class="body">
+      <sh-input-text
+        class="input"
+        label="Content"
+        mandatory
+        (value-changed)="onContentChange($event)"
+      ></sh-input-text>
+    </div>
+    <div slot="footer" class="footer">
+      <sh-button
+        label="Confirm"
+        color="primary"
+        (click)="createTodoItem()"
+      ></sh-button>
+      <sh-button
+        label="Cancel"
+        color="secondary"
+        (click)="closeCreateApplicationDrawer()"
+      ></sh-button>
+    </div>
+  </sh-drawer>
+</div>
