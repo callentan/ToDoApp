@@ -1,0 +1,16 @@
+<div class="container">
+  <sh-toggle
+    label="Automatic Deletion"
+    [active]="((configuration$ | async)?.autoDeletion)!.isEnabled"
+    (active-changed)="toggleAutoDeletion($event.target)"
+  ></sh-toggle>
+  <div class="body" *ngIf="((configuration$ | async)?.autoDeletion)!.isEnabled">
+    <sh-text>Clear data days ago</sh-text>
+    <sh-input-text
+      class="input"
+      label="Days"
+      mandatory
+      [value]="((configuration$ | async)?.autoDeletion)!.days"
+    ></sh-input-text>
+  </div>
+</div>

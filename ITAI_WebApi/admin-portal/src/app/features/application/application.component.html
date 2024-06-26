@@ -1,0 +1,87 @@
+<div class="container">
+  <sh-button
+    size="l"
+    color="primary"
+    label="New Application"
+    (click)="openCreateApplicationDrawer()"
+  ></sh-button>
+  <sh-table>
+    <sh-table-row slot="header">
+      <sh-table-head columns="6" col-m="12" col-s="24"
+        >Application Name</sh-table-head
+      >
+      <sh-table-head columns="6" col-m="12" col-s="0"
+        >OpenApps Id</sh-table-head
+      >
+      <sh-table-head columns="3" col-m="0" col-s="0">Status</sh-table-head>
+      <sh-table-head columns="6" col-m="0" col-s="0">Endpoint</sh-table-head>
+      <sh-table-head columns="6" col-m="0" col-s="0">Description</sh-table-head>
+      <sh-table-head icon>
+        <sh-icon button icon=""></sh-icon>
+      </sh-table-head>
+    </sh-table-row>
+    <sh-table-row *ngFor="let app of applications">
+      <sh-table-cell columns="6" col-m="12" col-s="24">{{
+        app.name
+      }}</sh-table-cell>
+      <sh-table-cell columns="6" col-m="12" col-s="0">{{
+        app.syngoAppId
+      }}</sh-table-cell>
+      <sh-table-cell columns="3" col-m="0" col-s="0">{{
+        app.status
+      }}</sh-table-cell>
+      <sh-table-cell columns="6" col-m="0" col-s="0">{{
+        app.endpoint
+      }}</sh-table-cell>
+      <sh-table-cell columns="6" col-m="0" col-s="0">{{
+        app.description
+      }}</sh-table-cell>
+      <sh-table-cell icon>
+        <sh-icon button icon="more"></sh-icon>
+      </sh-table-cell>
+    </sh-table-row>
+  </sh-table>
+  <sh-drawer *ngIf="isDrawerDisplay" position="right" sticky visible>
+    <div slot="header" class="header">
+      <sh-text size="header-1">Create a new application</sh-text>
+    </div>
+    <div class="body">
+      <sh-input-text
+        class="input"
+        label="Application Name"
+        mandatory
+        (value-changed)="onAppNameChange($event)"
+      ></sh-input-text>
+      <sh-input-text
+        class="input"
+        label="OpenApps Id"
+        mandatory
+        (value-changed)="onAppIdChange($event)"
+      ></sh-input-text>
+      <sh-input-text
+        class="input"
+        label="Endpoint"
+        mandatory
+        (value-changed)="onAppEndpointChange($event)"
+      ></sh-input-text>
+      <sh-input-text
+        class="input"
+        textarea
+        label="Description"
+        (value-changed)="onAppDesChange($event)"
+      ></sh-input-text>
+    </div>
+    <div slot="footer" class="footer">
+      <sh-button
+        label="Confirm"
+        color="primary"
+        (click)="createApplication()"
+      ></sh-button>
+      <sh-button
+        label="Cancel"
+        color="secondary"
+        (click)="closeCreateApplicationDrawer()"
+      ></sh-button>
+    </div>
+  </sh-drawer>
+</div>

@@ -1,0 +1,12 @@
+<sh-tabs>
+  <sh-tab-item
+    label="Application"
+    (click)="loadApplicationPage()"
+    [active]="route === 'application'"
+  ></sh-tab-item>
+  <sh-tab-item
+    label="Configuration"
+    (click)="loadConfigurationPage()"
+    [active]="route === 'Configuration'"
+  ></sh-tab-item>
+</sh-tabs>

@@ -1,0 +1,17 @@
+<sh-page theme="dark">
+  <sh-access-bar slot="access" label="OpenApps Extension Administrator Portal">
+    <sh-icon
+      slot="functions"
+      button
+      icon="notification-center"
+      badge="3"
+      id="notification-icon"
+    ></sh-icon>
+    <sh-icon slot="functions" button icon="help"></sh-icon>
+    <sh-user-identifier slot="user" initials="AS"></sh-user-identifier>
+  </sh-access-bar>
+  <div class="container">
+    <app-tabs slot="nav" class="tabs"></app-tabs>
+    <router-outlet />
+  </div>
+</sh-page>

@@ -1,0 +1,33 @@
+/* FONTS
+*/
+@font-face {
+    font-family: "sh-icons";
+    font-style: normal;
+    font-weight: 500;
+    src:
+        url("./fonts/sh-icons.woff") format("woff")
+}
+@font-face {
+    font-family: 'siemens sans';
+    font-style: normal;
+    font-weight: 500;
+    src:
+        url("./fonts/sisan03.woff") format("woff"),
+        url("./fonts/sisan03.woff2") format("woff2")
+}
+@font-face {
+    font-family: 'siemens sans';
+    font-style: normal;
+    font-weight: 900;
+    src:
+        url("./fonts/sisan08.woff") format("woff"),
+        url("./fonts/sisan08.woff2") format("woff2")
+}
+@font-face {
+    font-family: 'bree-headline';
+    font-style: normal;
+    font-weight: 500;
+    src:
+        url('./fonts/Bree-SH-Headline-Regular.woff') format('woff'),
+        url('./fonts/Bree-SH-Headline-Regular.woff2') format('woff2')
+}
