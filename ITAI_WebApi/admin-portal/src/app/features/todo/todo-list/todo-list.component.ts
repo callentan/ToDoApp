@@ -8,7 +8,7 @@ import {
 import { TodoService } from '../../../services/todo.service';
 import { TodoItem } from '../../../../model/todoItem';
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-todo-list',
@@ -26,7 +26,9 @@ export class TodoListComponent implements OnInit {
   isDrawerDisplay: boolean = false;
   newTodoItem: TodoItem | undefined;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.fetchItems();
+  }
 
   fetchItems() {
     this.todoItemsSub?.unsubscribe();
