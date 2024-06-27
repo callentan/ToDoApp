@@ -26,7 +26,7 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {}
 
   openCreateTodoItemnDrawer() {
-    this.newTodoItem = { name: '', isComplete: 0 };
+    this.newTodoItem = { name: '', isComplete: false };
     this.isDrawerDisplay = true;
   }
 
@@ -37,7 +37,7 @@ export class TodoListComponent implements OnInit {
   }
 
   closeCreateApplicationDrawer() {
-    this.newTodoItem = { name: '', isComplete: 0 };
+    this.newTodoItem = { name: '', isComplete: false };
     this.isDrawerDisplay = false;
   }
 
