@@ -21,7 +21,26 @@
         item.isComplete
       }}</sh-table-cell>
       <sh-table-cell icon>
-        <sh-icon button icon="more"></sh-icon>
+        <sh-icon button icon="more" [id]="item.id?.toString()"></sh-icon>
+        <sh-popover
+          [target]="item.id?.toString()"
+          position="bottom-left"
+          (click)="$event.stopPropagation()"
+        >
+          <sh-menu-item
+            icon="wellbeing-completed"
+            *ngIf="!item.isComplete"
+            label="Complete"
+            (click)="completeTodoItem(item)"
+          >
+          </sh-menu-item>
+          <sh-menu-item
+            icon="delete"
+            label="Delete"
+            (click)="deleteTodoItem(item)"
+          >
+          </sh-menu-item>
+        </sh-popover>
       </sh-table-cell>
     </sh-table-row>
   </sh-table>

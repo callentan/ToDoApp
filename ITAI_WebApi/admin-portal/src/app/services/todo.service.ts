@@ -18,4 +18,14 @@ export class TodoService extends BaseService {
     const url = `${this.endpoint}${this.path}`;
     return this.http.post<void>(url, item);
   }
+
+  updateTodoItem(item: TodoItem): Observable<void> {
+    const url = `${this.endpoint}${this.path}/${item.id}`;
+    return this.http.put<void>(url, item);
+  }
+
+  deleteTodoItem(item: TodoItem): Observable<void> {
+    const url = `${this.endpoint}${this.path}/${item.id}`;
+    return this.http.delete<void>(url);
+  }
 }

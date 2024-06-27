@@ -56,6 +56,19 @@ export class TodoListComponent implements OnInit {
     });
   }
 
+  completeTodoItem(item: TodoItem) {
+    const payload = { ...item, isComplete: true };
+    this.todoService.updateTodoItem(payload).subscribe(() => {
+      this.fetchItems();
+    });
+  }
+
+  deleteTodoItem(item: TodoItem) {
+    this.todoService.deleteTodoItem(item).subscribe(() => {
+      this.fetchItems();
+    });
+  }
+
   onContentChange(e: Event) {
     this.newTodoItem!.name =
       (e.target && (e.target as HTMLInputElement).value) || '';
