@@ -9,7 +9,7 @@ import { BaseService } from './base.service';
 })
 export class TodoService extends BaseService {
   private http = inject(HttpClient);
-  private readonly path = '/api/todoitems';
+  private readonly path = '/api/TodoItems';
   getTodoItems(): Observable<TodoItem[]> {
     const url = `${this.endpoint}${this.path}`;
     return this.http.get<TodoItem[]>(url);
