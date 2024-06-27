@@ -26,7 +26,7 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {}
 
   openCreateTodoItemnDrawer() {
-    this.newTodoItem = { content: '', isComplete: 0 };
+    this.newTodoItem = { name: '', isComplete: 0 };
     this.isDrawerDisplay = true;
   }
 
@@ -37,12 +37,12 @@ export class TodoListComponent implements OnInit {
   }
 
   closeCreateApplicationDrawer() {
-    this.newTodoItem = { content: '', isComplete: 0 };
+    this.newTodoItem = { name: '', isComplete: 0 };
     this.isDrawerDisplay = false;
   }
 
   onContentChange(e: Event) {
-    this.newTodoItem!.content =
+    this.newTodoItem!.name =
       (e.target && (e.target as HTMLInputElement).value) || '';
   }
 }

@@ -15,7 +15,7 @@
     </sh-table-row>
     <sh-table-row *ngFor="let item of todoItems$ | async">
       <sh-table-cell columns="12" col-m="12" col-s="24">{{
-        item.content
+        item.name
       }}</sh-table-cell>
       <sh-table-cell columns="6" col-m="12" col-s="0">{{
         item.isComplete
