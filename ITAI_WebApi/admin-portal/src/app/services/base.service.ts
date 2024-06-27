@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class BaseService {
-  endpoint = 'http://192.168.0.5:8888';
+  endpoint = 'http://117.88.94.61:8888';
   setEndpoint(endpoint: string) {
     this.endpoint = endpoint;
   }
