@@ -13,7 +13,7 @@
         <sh-icon button icon=""></sh-icon>
       </sh-table-head>
     </sh-table-row>
-    <sh-table-row *ngFor="let item of todoItems$ | async">
+    <sh-table-row *ngFor="let item of todoItems">
       <sh-table-cell columns="12" col-m="12" col-s="24">{{
         item.name
       }}</sh-table-cell>

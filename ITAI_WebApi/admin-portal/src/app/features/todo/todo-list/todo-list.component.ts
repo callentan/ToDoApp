@@ -1,5 +1,6 @@
 import {
   CUSTOM_ELEMENTS_SCHEMA,
+  ChangeDetectorRef,
   Component,
   OnInit,
   inject,
@@ -7,7 +8,7 @@ import {
 import { TodoService } from '../../../services/todo.service';
 import { TodoItem } from '../../../../model/todoItem';
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-todo-list',
@@ -19,26 +20,38 @@ import { Observable } from 'rxjs';
 })
 export class TodoListComponent implements OnInit {
   todoService = inject(TodoService);
-  todoItems$: Observable<TodoItem[]> = this.todoService.getTodoItems();
+  cdr = inject(ChangeDetectorRef);
+  todoItemsSub!: Subscription;
+  todoItems: TodoItem[] = [];
   isDrawerDisplay: boolean = false;
   newTodoItem: TodoItem | undefined;
 
   ngOnInit() {}
+
+  fetchItems() {
+    this.todoItemsSub?.unsubscribe();
+
+    this.todoItemsSub = this.todoService.getTodoItems().subscribe((items) => {
+      this.todoItems = items;
+      this.cdr.detectChanges();
+    });
+  }
 
   openCreateTodoItemnDrawer() {
     this.newTodoItem = { name: '', isComplete: false };
     this.isDrawerDisplay = true;
   }
 
-  createTodoItem() {
-    this.todoService.createTodoItem(this.newTodoItem!).subscribe(() => {
-      this.isDrawerDisplay = false;
-    });
-  }
-
   closeCreateApplicationDrawer() {
     this.newTodoItem = { name: '', isComplete: false };
+    this.fetchItems();
     this.isDrawerDisplay = false;
+  }
+
+  createTodoItem() {
+    this.todoService.createTodoItem(this.newTodoItem!).subscribe(() => {
+      this.closeCreateApplicationDrawer();
+    });
   }
 
   onContentChange(e: Event) {
